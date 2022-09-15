@@ -21,13 +21,14 @@ class Purse:
         print('Maks izdzēsts')
         #return self.money
 
-x=Purse('USD')
-y=Purse('EUR', 'Bill')
-x.top_up_balance(100)
-x.money=200
+y=Purse("USD")
+x=Purse("EUR", "Bill")
+x.money=int(input("ievadiet cik daudz naudas ir maka "))
+money1=int(input("ievadiet cik nopelnijat "))
+money2=int(input("ievadiet cik iznemat  "))
+x.top_up_balance(money1)
+x.top_down_balance(money2)
+
+y.top_up_balance(300)
 x.info()
-
-
-#x.money=100
-#print(y.info())
-#print(x.info())
+y.info()
